@@ -14,4 +14,9 @@ class Question(models.Model):
         return f"hola {self.question_q}"
 
     def area(self, x, y):
+        lalala()
         return x * y
+
+
+def lalala():
+    print("lalala")
