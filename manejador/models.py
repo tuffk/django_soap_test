@@ -8,3 +8,10 @@ class Question(models.Model):
 
     def __str__(self):
         return f'Pregunta: {self.question_q}\nRespuesta: {self.question_a}\n'
+
+    @property
+    def greet(self):
+        return f"hola {self.question_q}"
+
+    def area(self, x, y):
+        return x * y

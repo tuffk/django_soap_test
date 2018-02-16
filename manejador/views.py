@@ -13,6 +13,16 @@ def index(request):
     return HttpResponse(template.render(data, request))
 
 
+def show(request, q_id):
+    template = loader.get_template('manejador/index.html')
+    zain = Question.objects.first()
+    print(zain.area(5, 5))
+    data = {
+        'questions': [zain]
+    }
+    return HttpResponse(template.render(data, request))
+
+
 def soapsl(request):
     import zeep
     from lxml import etree
